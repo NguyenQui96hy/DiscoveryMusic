@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DiscoverMusic</string>
+    <string name="str_song">Songs</string>
+    <string name="str_discover">Discover</string>
+    <string name="str_setting">Setting</string>
+</resources>
