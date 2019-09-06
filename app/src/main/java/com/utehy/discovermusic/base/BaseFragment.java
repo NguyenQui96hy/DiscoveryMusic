@@ -33,4 +33,8 @@ public abstract class BaseFragment extends Fragment {
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().add(container, fragment).commit();
     }
+
+    public BaseActivity getBaseActivity(){
+        return ((BaseActivity) getActivity());
+    }
 }
