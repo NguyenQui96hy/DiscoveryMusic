@@ -20,10 +20,49 @@
     <dimen name="spacing_card">10dp</dimen>
     <dimen name="spacing_card_album_grid">3dp</dimen>
 
-    <item name="letter_to_tile_ratio" type="dimen">53%</item>
-
     <dimen name="header_height">370dp</dimen>
+
     <dimen name="min_header_height">270dp</dimen>
     <dimen name="header_logo_size">100dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <item name="letter_to_tile_ratio" type="dimen">53%</item>
+
+
+
+    <!-- Margin -->
+    <dimen name="margin_xxl">30dp</dimen>
+    <dimen name="margin_xl">25dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_normal">10dp</dimen>
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="margin_left">16dp</dimen>
+    <dimen name="margin_right">16dp</dimen>
+
+    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_medium">15dp</dimen>
+    <dimen name="padding_xxl">30dp</dimen>
+    <dimen name="padding_xl">25dp</dimen>
+
+    <!-- Size Text -->
+    <dimen name="text_size_xxl">23sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_normal">17sp</dimen>
+    <dimen name="text_size_small">15sp</dimen>
+    <dimen name="text_size_xs">11sp</dimen>
+    <dimen name="text_size_xxs">9sp</dimen>
+
+    <dimen name="h_button">44dp</dimen>
+    <dimen name="h_item_fab">48dp</dimen>
+
+    <dimen name="standard_80">80dp</dimen>
+    <dimen name="standard_133">133dp</dimen>
+    <dimen name="standard_186">186dp</dimen>
+    <dimen name="w_icon_back">30dp</dimen>
+    <dimen name="w_one_button">140dp</dimen>
 
 </resources>

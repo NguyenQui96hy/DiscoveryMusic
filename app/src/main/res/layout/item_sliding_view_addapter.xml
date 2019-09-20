@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="#0F000000"
+        android:scaleType="centerCrop" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/padding_xxl">
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+
+<!--            android:id="@+id/imageChild"-->
+<!--            android:background="@drawable/bg_image_radius"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_margin="@dimen/margin_normal" />-->
+        <com.joooonho.SelectableRoundedImageView
+            android:layout_margin="@dimen/margin_normal"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageChild"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            app:sriv_left_top_corner_radius="5dp"
+            app:sriv_right_top_corner_radius="5dp"
+            app:sriv_left_bottom_corner_radius="5dp"
+            app:sriv_right_bottom_corner_radius="5dp"
+            app:sriv_oval="false" />
+
+        <com.vmodev.cibes.widget.CustomFontTextView
+            android:id="@+id/tvNameSong"
+            android:layout_alignTop="@+id/imageChild"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageChild"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"
+            android:text="Ánh nắng mang theo"
+            tools:text="Ánh nắng mang theo" />
+
+        <com.vmodev.cibes.widget.CustomFontTextView
+            android:id="@+id/tvDescriptionSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameSong"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@+id/imageChild"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/text_size_xs"
+            android:text="Một ca khúc và sự kết hợp của nghệ sĩ sáo trúc hoàng anh "
+            tools:text="Một ca khúc và sự kết hợp của nghệ sĩ sáo trúc hoàng anh " />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

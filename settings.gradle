@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':multitypeadapter'
 rootProject.name='DiscoverMusic'
