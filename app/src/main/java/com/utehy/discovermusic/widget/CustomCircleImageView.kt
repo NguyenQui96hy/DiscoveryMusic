@@ -107,6 +107,7 @@ class CustomCircleImageView : ImageView {
         init()
     }
 
+    @SuppressLint("CustomViewStyleable")
     @JvmOverloads
     constructor(context: Context, attrs: AttributeSet, defStyle: Int = 0) : super(context, attrs, defStyle) {
 
