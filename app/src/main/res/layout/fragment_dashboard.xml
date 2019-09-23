@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -14,6 +15,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:id="@+id/llTitleAllSong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/customSliderSlideShow"
+            app:layout_constraintTop_toBottomOf="@+id/customSliderSlideShow">
+
+
+            <com.vmodev.cibes.widget.CustomFontTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_small"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_large"
+                android:text="Bài hát của tôi"
+                tools:text="Bài hát của tôi" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:srcCompat="@drawable/ic_next" />
+        </LinearLayout>
+
+
+
 
         <com.utehy.discovermusic.widget.slider.CustomSliderSlideShow
             android:id="@+id/customSliderSlideShow"
@@ -25,10 +59,42 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDataSong"
-            android:layout_marginTop="@dimen/text_size_large"
-            app:layout_constraintTop_toBottomOf="@+id/customSliderSlideShow"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/llTitleAllSong" />
+
+        <LinearLayout
+            android:id="@+id/llLoadMore"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rvDataSong"
+            app:layout_constraintEnd_toEndOf="@+id/rvDataSong"
+            app:layout_constraintStart_toStartOf="@+id/rvDataSong">
+
+            <com.vmodev.cibes.widget.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xem thêm"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:textColor="@color/colorPurple"
+                android:textSize="@dimen/text_size_small" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginTop="2dp"
+               android:layout_marginLeft="@dimen/margin_small"
+                app:srcCompat="@drawable/ic_next_color_purple"
+                android:layout_width="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

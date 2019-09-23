@@ -20,5 +20,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public abstract void setComponent();
 
+    public abstract void showToolbar(boolean isShowToolBar);
+
+
+
+
 
 }

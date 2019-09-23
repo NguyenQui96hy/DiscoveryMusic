@@ -1,8 +1,6 @@
 package com.utehy.discovermusic.widget.slider
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Parcelable
 
 import android.view.LayoutInflater
@@ -13,9 +11,6 @@ import androidx.viewpager.widget.PagerAdapter
 import com.joooonho.SelectableRoundedImageView
 import com.utehy.discovermusic.R
 import java.util.*
-import com.utehy.discovermusic.utils.ImageConverter
-
-
 
 
 class SlidingViewAdapter(private val context: Context, private val listImageURL: ArrayList<Int>) : PagerAdapter() {
@@ -40,7 +35,7 @@ class SlidingViewAdapter(private val context: Context, private val listImageURL:
         val imageView = imageLayout
                 .findViewById(R.id.image) as ImageView
         val imageChild = imageLayout
-                .findViewById(R.id.imageChild) as SelectableRoundedImageView
+                .findViewById(R.id.imageSong) as SelectableRoundedImageView
 
         imageView.setImageResource(listImageURL[position])
         imageChild.setImageResource(listImageURL[position])

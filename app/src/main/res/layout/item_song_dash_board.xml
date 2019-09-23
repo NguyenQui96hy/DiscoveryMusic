@@ -2,40 +2,64 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/margin_normal"
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:id="@+id/rlImageSong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <com.joooonho.SelectableRoundedImageView
-            android:id="@+id/imageChild"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_margin="@dimen/margin_normal"
-            android:scaleType="centerCrop"
-            android:src="@drawable/image3"
-            app:sriv_left_bottom_corner_radius="5dp"
-            app:sriv_left_top_corner_radius="5dp"
-            app:sriv_oval="false"
-            app:sriv_right_bottom_corner_radius="5dp"
-            app:sriv_right_top_corner_radius="5dp" />
+    <com.joooonho.SelectableRoundedImageView
+        android:id="@+id/imageSong"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image3"
+        app:sriv_left_bottom_corner_radius="5dp"
+        app:sriv_left_top_corner_radius="5dp"
+        app:sriv_oval="false"
+        app:sriv_right_bottom_corner_radius="5dp"
+        app:sriv_right_top_corner_radius="5dp" />
 
-    </RelativeLayout>
-
-    <com.vmodev.cibes.widget.CustomFontTextView
-        android:singleLine="true"
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rlImageSong"
-        android:layout_alignStart="@+id/rlImageSong"
-        android:layout_alignEnd="@+id/rlImageSong"
-        tools:text="Tình yêu mang theo" />
+        android:layout_margin="@dimen/margin_small"
+        android:layout_alignStart="@+id/imageSong"
+        android:src="@drawable/ic_compact_disc" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvNameSong"
+        android:layout_alignEnd="@+id/imageSong"
+        android:layout_margin="@dimen/margin_small"
+        android:src="@drawable/ic_play_button" />
+
+
+    <com.vmodev.cibes.widget.CustomFontTextView
+        android:id="@+id/tvNameSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageSong"
+        android:layout_alignStart="@+id/imageSong"
+        android:layout_alignEnd="@+id/imageSong"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack"
+        tools:text="Nắng ấm xa dần" />
+
+    <com.vmodev.cibes.widget.CustomFontTextView
+        android:id="@+id/tvAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNameSong"
+        android:layout_alignStart="@+id/tvNameSong"
+        android:layout_alignEnd="@+id/tvNameSong"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:singleLine="true"
+        tools:text="Sơn tùng" />
 
 
 </RelativeLayout>

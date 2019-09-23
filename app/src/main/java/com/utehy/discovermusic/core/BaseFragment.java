@@ -4,16 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
-import com.utehy.discovermusic.R;
-import com.utehy.discovermusic.ui.fragment.dashborad.GalleryViewModel;
 
 public abstract class BaseFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -38,5 +31,9 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+    }
+
+    public BaseActivity getBaseActivity() {
+        return ((BaseActivity) getActivity());
     }
 }

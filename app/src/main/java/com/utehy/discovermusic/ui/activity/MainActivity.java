@@ -19,6 +19,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.utehy.discovermusic.R;
+import com.utehy.discovermusic.core.BaseActivity;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -28,17 +29,26 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private DrawerLayout drawer;
-    NavController navController;
+    private NavController navController;
+    private Toolbar  toolbar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+    public int initLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void setEvent() {
+
+    }
+
+    @Override
+    public void setComponent() {
+         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -53,7 +63,15 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
 
+    @Override
+    public void showToolbar(boolean isShowToolBar) {
+        if (isShowToolBar) {
+            toolbar.setVisibility(View.VISIBLE);
+        } else {
+            toolbar.setVisibility(View.GONE);
+        }
 
     }
 

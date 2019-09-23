@@ -9,13 +9,20 @@
         android:id="@+id/nav_dash_board"
         android:name="com.utehy.discovermusic.ui.fragment.dashborad.DashBoardFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_dashboard" >
+
+        <action
+            android:id="@+id/action_nav_gallery_to_songDetailFragment"
+            app:destination="@id/songDetailFragment"
+            />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.utehy.discovermusic.ui.fragment.dashborad.DashBoardFragment"
+        android:name="com.utehy.discovermusic.ui.fragment.send.SendFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -40,4 +47,11 @@
         android:name="com.utehy.discovermusic.ui.fragment.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+    <fragment
+        android:id="@+id/songDetailFragment"
+        android:name="com.utehy.discovermusic.ui.fragment.songdetail.SongDetailFragment"
+        android:label="SongDetailFragment"
+        tools:layout="@layout/fragment_song_detail"
+        />
+
 </navigation>
