@@ -15,6 +15,9 @@
             android:id="@+id/action_nav_gallery_to_songDetailFragment"
             app:destination="@id/songDetailFragment"
             />
+        <argument
+            android:name="LIST_ALL_SONG"
+            app:argType="com.utehy.discovermusic.model.Song[]" />
     </fragment>
 
     <fragment

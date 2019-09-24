@@ -2,6 +2,7 @@ package com.utehy.discovermusic.ui.fragment.dashborad;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -37,7 +38,9 @@ public class DashBoardFragment extends BaseFragment implements View.OnClickListe
     private List<Object> items;
     private MultiTypeAdapter multiTypeAdapter;
     private LinearLayout llLoadMore;
-     NavController navController ;
+    private NavController navController;
+    private static final String LIST_ALL_SONG = "LIST_ALL_SONG";
+    private List<Song> songList;
 
     @Override
     public int initLayout() {
@@ -61,6 +64,7 @@ public class DashBoardFragment extends BaseFragment implements View.OnClickListe
 
     @Override
     public void initComponent() {
+        songList = new ArrayList<>();
         customSliderSlideShow.setListImageURL(StoreDataRes.getListImageSlider());
         registerAdapter();
         reloadAdapter();
@@ -71,6 +75,11 @@ public class DashBoardFragment extends BaseFragment implements View.OnClickListe
     @Override
     public void setEvent() {
         llLoadMore.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void bundleData(Bundle bundle) {
 
     }
 
@@ -90,7 +99,8 @@ public class DashBoardFragment extends BaseFragment implements View.OnClickListe
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(final Void... unused) {
-                items.addAll(SongLoader.getAllSongs(getActivity()));
+                songList = SongLoader.getAllSongs(getActivity());
+                items.addAll(songList);
                 multiTypeAdapter.setItems(items);
                 return null;
             }
@@ -106,8 +116,9 @@ public class DashBoardFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.llLoadMore:
-                navController.navigate(R.id.action_nav_gallery_to_songDetailFragment);
-
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList(LIST_ALL_SONG, (ArrayList<? extends Parcelable>) songList);
+                navController.navigate(R.id.action_nav_gallery_to_songDetailFragment,bundle);
                 break;
         }
     }

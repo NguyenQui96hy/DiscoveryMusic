@@ -16,6 +16,7 @@ public abstract class BaseFragment extends Fragment {
         initMappingScreen(root);
         initComponent();
         setEvent();
+        bundleData(savedInstanceState);
         return root;
     }
 
@@ -26,6 +27,7 @@ public abstract class BaseFragment extends Fragment {
     public abstract void initComponent();
 
     public abstract void setEvent();
+    public abstract void bundleData(Bundle bundle);
 
 
     @Override
